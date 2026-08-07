@@ -1,6 +1,8 @@
 # Gravitas '26 Planner
 
-A personalized event planning companion for **Gravitas**, VIT Vellore's annual tech fest. Instead of scrolling through a long list of events trying to figure out what's worth attending and whether anything clashes, this tool ranks events based on your interests, lets you build a plan visually on a calendar, flags scheduling conflicts, and exports everything to your personal calendar.
+I'm a fresher at VIT, and when I first looked into Gravitas — VIT's big annual tech fest — I realized just how much is actually happening: 137+ events across hackathons, workshops, competitions, and club meetups, all competing for the same few weeks (and often the same time slots). Every club's page makes a good case for why you should attend *their* event, and the official site just lists everything out chronologically, with no easy way to figure out what actually fits your interests or your schedule.
+
+So I built this for myself first — a way to filter down to what I actually care about, see it laid out on an actual calendar, catch clashes before they become last-minute problems, and get it all onto my phone's calendar without manually typing out 20 events. Once it worked well enough for me, I figured other freshers (and honestly, anyone else drowning in the same event list) might find it useful too.
 
 **Live demo:** [gravitas-planner.vercel.app](https://gravitas-planner.vercel.app/)
 
@@ -18,7 +20,7 @@ A personalized event planning companion for **Gravitas**, VIT Vellore's annual t
 
 ## What it does
 
-- **Personalized recommendations** — Pick your primary goal (build, compete, learn, network, or explore everything) and rank your technical interests. Every event gets a transparent match score (e.g. `92% match · AI 70 · Web 18`) so you know exactly why it's recommended.
+- **Personalized recommendations** — Pick your primary goal (build, compete, learn, network, or explore everything) and rank your technical interests. Every event gets a transparent match score (e.g. `92% match · AI 70 · Web 18`) so you know exactly why it's recommended, instead of just trusting whichever club shouted the loudest.
 - **Explore & filter** — Search and filter 137+ events by type (Hackathon, Workshop, Competition, etc.), sort by best match, soonest, free-first, or shortest duration.
 - **Visual planner** — Add events to "My Plan" and see them laid out across the whole festival: a month-style overview, a day timeline, an agenda list, or a full week view.
 - **Conflict detection** — Automatically flags overlapping events in your plan, with the option to ignore a clash if it's not actually a problem for you.
@@ -69,3 +71,7 @@ Output goes to the `dist/` folder.
 ## Updating event data
 
 Event data lives in `src/data/events_scored.json`. To refresh it, replace this file with an updated dataset in the same shape and redeploy — no other code changes are needed for new events to show up.
+
+---
+
+Built by **Maneet Singh** · [LinkedIn](https://www.linkedin.com/in/maneet-singh-826b65410/)
