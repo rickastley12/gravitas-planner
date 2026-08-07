@@ -292,6 +292,10 @@
     flex-direction: column;
     align-items: flex-start;
   }
+  .header-actions {
+    width: 100%;
+    flex-wrap: wrap;
+  }
   .header-filter-bar {
     flex-direction: column;
     align-items: stretch;
