@@ -6,8 +6,9 @@ import listPlugin from '@fullcalendar/list';
 import interactionPlugin from '@fullcalendar/interaction';
 import { toFullCalendarEvent, parseAPIDate, formatEventTime, getTypeColor } from '../utils/scoring';
 import { exportEventsToICS } from '../utils/exportICS';
+import { copyPlanAsText } from '../utils/exportText';
 import rawEvents from '../data/events_scored.json';
-import { Calendar, List, Clock, AlertTriangle, Download, Share2, ArrowLeft, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Calendar, List, Clock, AlertTriangle, Download, Share2, ClipboardList, Check, ArrowLeft, ChevronLeft, ChevronRight } from 'lucide-react';
 
 // Helper to get start of week (Sunday)
 function getStartOfWeek(d) {
@@ -46,6 +47,18 @@ export default function CalendarView({
   const [focusedDate, setFocusedDate] = useState('2026-08-28');
   const [filterConflictsOnly, setFilterConflictsOnly] = useState(false);
   const [conflictIndex, setConflictIndex] = useState(0);
+  const [copiedText, setCopiedText] = useState(false);
+  const copiedTextTimerRef = useRef(null);
+
+  const handleCopyPlanAsText = async () => {
+    if (myEvents.length === 0) return;
+    const ok = await copyPlanAsText(myEvents);
+    if (ok) {
+      setCopiedText(true);
+      if (copiedTextTimerRef.current) clearTimeout(copiedTextTimerRef.current);
+      copiedTextTimerRef.current = setTimeout(() => setCopiedText(false), 2500);
+    }
+  };
 
   const calendarRef = useRef(null);
   const firstWeekRef = useRef(null);
@@ -325,6 +338,9 @@ export default function CalendarView({
         <div className="plan-actions-group">
           <button className="export-ics-btn" onClick={() => exportEventsToICS(myEvents)}>
             <Download size={16} /> Download Calendar (.ics)
+          </button>
+          <button className="copy-text-btn" onClick={handleCopyPlanAsText}>
+            {copiedText ? <Check size={16} /> : <ClipboardList size={16} />} {copiedText ? 'Copied!' : 'Copy as Text'}
           </button>
           <button className="share-plan-btn" onClick={onSharePlan}>
             <Share2 size={16} /> Share Plan

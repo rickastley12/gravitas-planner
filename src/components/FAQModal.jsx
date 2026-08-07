@@ -1,6 +1,6 @@
 import React from 'react';
 import './FAQModal.css';
-import { X, HelpCircle, Database, ShieldAlert, Sparkles, RefreshCw } from 'lucide-react';
+import { X, HelpCircle, Database, ShieldAlert, Sparkles, RefreshCw, CalendarPlus, Share2 } from 'lucide-react';
 
 export default function FAQModal({ onClose }) {
   return (
@@ -36,6 +36,29 @@ export default function FAQModal({ onClose }) {
             <h4><ShieldAlert size={16} /> Does this automatically register me for events?</h4>
             <p>
               <strong>No.</strong> This application is an independent student planning companion. To complete official registration and payments, click the <strong>"Official Registration"</strong> link on any event card to open the VIT portal.
+            </p>
+          </div>
+
+          <div className="faq-item">
+            <h4><CalendarPlus size={16} /> How do I get my plan into Google Calendar or Apple Calendar?</h4>
+            <p>
+              Click <strong>"Download Calendar (.ics)"</strong> to save a file with all your planned events.
+            </p>
+            <p>
+              <strong>Apple Calendar (iPhone/iPad/Mac):</strong> just open the downloaded file — tapping it on iPhone/iPad, or double-clicking it on Mac, adds all the events straight away.
+            </p>
+            <p>
+              <strong>Google Calendar:</strong> go to <code>calendar.google.com</code> on a computer → Settings (gear icon) → <strong>Import & Export</strong> → <strong>Import</strong> → choose the downloaded file → pick a calendar to add the events to. Google's mobile app doesn't support importing this file directly, so this step works best from a computer browser.
+            </p>
+            <p>
+              Not comfortable with calendar apps? Use <strong>"Copy as Text"</strong> instead — it copies a clean list of your events with dates, times and venues that you can paste into Notes, WhatsApp, or anywhere else.
+            </p>
+          </div>
+
+          <div className="faq-item">
+            <h4><Share2 size={16} /> What does the "Share Plan" button do?</h4>
+            <p>
+              It copies a link that pre-loads <strong>your exact event selections</strong> for whoever opens it — useful for sending your plan to a friend so they can see (and start from) the same events. It's for sharing your picks with a person, not for exporting to a calendar app — use the <strong>.ics download</strong> or <strong>Copy as Text</strong> options above for that.
             </p>
           </div>
 
