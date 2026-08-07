@@ -221,10 +221,13 @@ export default function CalendarView({
     return `${hrs}:${mins}:00`;
   }, [myEvents, focusedDate]);
 
-  // Sync FullCalendar date when focusedDate or viewMode changes
+  // Sync FullCalendar view & date when focusedDate or viewMode changes
   useEffect(() => {
     if (viewMode !== 'overview' && calendarRef.current) {
       const api = calendarRef.current.getApi();
+      if (api.view.type !== viewMode) {
+        api.changeView(viewMode);
+      }
       api.gotoDate(focusedDate);
     }
   }, [focusedDate, viewMode]);
