@@ -28,61 +28,63 @@ export default function Header({
   const [showRegistrationModal, setShowRegistrationModal] = useState(false);
 
   return (
-    <header className="app-header">
-      <div className="header-top-row">
-        <div className="brand-col">
-          <div className="brand-logo" onClick={() => setActiveTab('explore')}>
-            <span className="brand-name">GRAVITAS</span>
-            <span className="brand-sub">PLANNER</span>
+    <>
+      <header className="app-header-top">
+        <div className="header-top-row">
+          <div className="brand-col">
+            <div className="brand-logo" onClick={() => setActiveTab('explore')}>
+              <span className="brand-name">GRAVITAS</span>
+              <span className="brand-sub">PLANNER</span>
+            </div>
+          </div>
+
+          {/* Navigation Tabs */}
+          <div className="nav-tabs">
+            <button 
+              className={`nav-tab ${activeTab === 'explore' ? 'active' : ''}`}
+              onClick={() => setActiveTab('explore')}
+            >
+              <Compass size={16} /> Explore events
+            </button>
+
+            <button 
+              className={`nav-tab ${activeTab === 'plan' ? 'active' : ''}`}
+              onClick={() => setActiveTab('plan')}
+            >
+              <CalendarCheck size={16} /> My plan
+              {planCount > 0 && <span className="plan-count-pill mono-font">({String(planCount).padStart(2, '0')})</span>}
+            </button>
+          </div>
+
+          <div className="header-actions">
+            <button className="icon-action-btn register-action-btn mono-font" onClick={() => setShowRegistrationModal(true)}>
+              <Ticket size={14} /> Register
+            </button>
+
+            <button className="icon-action-btn mono-font" onClick={onOpenPersonalize} title="Personalize your recommendations">
+              <SlidersHorizontal size={14} /> Personalize
+            </button>
+
+            <button className="icon-action-btn mono-font" onClick={onSharePlan} title="Share Plan Link">
+              <Share2 size={14} /> Share
+            </button>
+
+            <button className="icon-action-btn mono-font" onClick={onOpenFAQ} title="FAQ & Data Guide">
+              <HelpCircle size={16} /> FAQ
+            </button>
+
+            <a
+              className="icon-action-btn mono-font github-link-btn"
+              href="https://github.com/rickastley12/gravitas-planner"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="View source on GitHub"
+            >
+              <GithubMark size={16} />
+            </a>
           </div>
         </div>
-
-        {/* Navigation Tabs */}
-        <div className="nav-tabs">
-          <button 
-            className={`nav-tab ${activeTab === 'explore' ? 'active' : ''}`}
-            onClick={() => setActiveTab('explore')}
-          >
-            <Compass size={16} /> Explore events
-          </button>
-
-          <button 
-            className={`nav-tab ${activeTab === 'plan' ? 'active' : ''}`}
-            onClick={() => setActiveTab('plan')}
-          >
-            <CalendarCheck size={16} /> My plan
-            {planCount > 0 && <span className="plan-count-pill mono-font">({String(planCount).padStart(2, '0')})</span>}
-          </button>
-        </div>
-
-        <div className="header-actions">
-          <button className="icon-action-btn register-action-btn mono-font" onClick={() => setShowRegistrationModal(true)}>
-            <Ticket size={14} /> Register
-          </button>
-
-          <button className="icon-action-btn mono-font" onClick={onOpenPersonalize} title="Personalize your recommendations">
-            <SlidersHorizontal size={14} /> Personalize
-          </button>
-
-          <button className="icon-action-btn mono-font" onClick={onSharePlan} title="Share Plan Link">
-            <Share2 size={14} /> Share
-          </button>
-
-          <button className="icon-action-btn mono-font" onClick={onOpenFAQ} title="FAQ & Data Guide">
-            <HelpCircle size={16} /> FAQ
-          </button>
-
-          <a
-            className="icon-action-btn mono-font github-link-btn"
-            href="https://github.com/rickastley12/gravitas-planner"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="View source on GitHub"
-          >
-            <GithubMark size={16} />
-          </a>
-        </div>
-      </div>
+      </header>
 
       {/* Filter Rail */}
       {activeTab === 'explore' && (
@@ -138,6 +140,6 @@ export default function Header({
           </section>
         </div>
       )}
-    </header>
+    </>
   );
 }
