@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Header.css';
-import { Search, Compass, CalendarCheck, HelpCircle, SlidersHorizontal, Share2, ExternalLink, X, Ticket } from 'lucide-react';
+import { Search, Compass, CalendarCheck, HelpCircle, SlidersHorizontal, Share2, ExternalLink, X, Ticket, Github } from 'lucide-react';
 
 export default function Header({ 
   activeTab, 
@@ -63,6 +63,16 @@ export default function Header({
           <button className="icon-action-btn mono-font" onClick={onOpenFAQ} title="FAQ & Data Guide">
             <HelpCircle size={16} /> FAQ
           </button>
+
+          <a
+            className="icon-action-btn mono-font github-link-btn"
+            href="https://github.com/rickastley12/gravitas-planner"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="View source on GitHub"
+          >
+            <Github size={16} />
+          </a>
         </div>
       </div>
 

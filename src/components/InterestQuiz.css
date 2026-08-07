@@ -6,6 +6,7 @@
   align-items: center;
   justify-content: center;
   padding: 40px 20px;
+  overflow-y: auto;
 }
 
 .onboarding-card {
@@ -50,6 +51,8 @@
   background: rgba(9, 9, 12, 0.85);
   backdrop-filter: blur(8px);
   z-index: 1000;
+  overflow-y: auto;
+  align-items: flex-start;
 }
 
 .header-right-group {
@@ -289,10 +292,16 @@
 }
 
 @media (max-width: 640px) {
+  .onboarding-page {
+    align-items: flex-start;
+  }
   .onboarding-card {
     padding: 20px;
   }
   .interests-grid {
     grid-template-columns: 1fr;
+  }
+  .onboarding-page.modal-backdrop {
+    padding: 20px 12px;
   }
 }
