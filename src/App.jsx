@@ -17,9 +17,9 @@ export default function App() {
   const [rankedInterests, setRankedInterests] = useState(() => {
     try {
       const saved = localStorage.getItem('gravitas_ranked_interests');
-      return saved ? JSON.parse(saved) : [{ id: 'ai_ml', rank: 1 }, { id: 'webdev', rank: 2 }, { id: 'hackathons', rank: 3 }];
+      return saved ? JSON.parse(saved) : [];
     } catch {
-      return [{ id: 'ai_ml', rank: 1 }, { id: 'webdev', rank: 2 }, { id: 'hackathons', rank: 3 }];
+      return [];
     }
   });
 
