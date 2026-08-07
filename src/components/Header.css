@@ -294,7 +294,12 @@
   }
   .header-actions {
     width: 100%;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .header-actions::-webkit-scrollbar {
+    display: none;
   }
   .header-filter-bar {
     flex-direction: column;
