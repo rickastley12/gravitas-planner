@@ -1,0 +1,587 @@
+.plan-page {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.plan-summary-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 16px 24px;
+}
+
+.plan-stats-group {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.stat-num {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.stat-label {
+  font-size: 0.72rem;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-card.warning .stat-num {
+  color: #EF4444;
+}
+
+.stat-card.success .stat-num {
+  color: var(--accent-success);
+}
+
+.plan-actions-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.export-ics-btn, .share-plan-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.export-ics-btn {
+  background: var(--accent-primary);
+  color: #FFFFFF;
+  border: none;
+}
+
+.export-ics-btn:hover {
+  background: #7C3AED;
+}
+
+.share-plan-btn {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-subtle);
+}
+
+.share-plan-btn:hover {
+  background: var(--bg-hover);
+}
+
+.conflict-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  border-radius: var(--radius-md);
+  padding: 14px 20px;
+}
+
+.conflict-banner-text {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #EF4444;
+}
+
+.conflict-banner-text p {
+  margin: 2px 0 0 0;
+  font-size: 0.78rem;
+  opacity: 0.85;
+}
+
+.conflict-controls-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.conflict-nav-arrows {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-secondary);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: #EF4444;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.conflict-nav-arrows button {
+  background: transparent;
+  border: none;
+  color: #EF4444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 2px;
+  border-radius: 4px;
+}
+
+.conflict-nav-arrows button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.conflict-filter-toggle {
+  background: #EF4444;
+  color: #FFFFFF;
+  border: none;
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.ignore-conflict-btn {
+  background: transparent;
+  border: 1px solid rgba(239, 68, 68, 0.45);
+  border-radius: var(--radius-sm);
+  color: #FCA5A5;
+  cursor: pointer;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 8px 14px;
+}
+
+.ignore-conflict-btn:hover {
+  background: rgba(239, 68, 68, 0.12);
+}
+
+.ignored-conflict-note {
+  align-items: center;
+  color: var(--text-secondary);
+  display: flex;
+  font-size: 0.75rem;
+  gap: 10px;
+}
+
+.ignored-conflict-note button {
+  background: transparent;
+  border: 0;
+  color: var(--accent-primary);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  padding: 0;
+}
+
+.calendar-controls-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 12px 20px;
+}
+
+.view-mode-tabs {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.view-mode-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.view-mode-btn.active {
+  background: var(--accent-primary);
+  border-color: var(--accent-primary);
+  color: #FFFFFF;
+}
+
+.timeline-header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.compact-date-nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.compact-date-nav button {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  border-radius: 4px;
+  transition: all 0.15s;
+}
+
+.compact-date-nav button:hover {
+  color: var(--text-primary);
+  background: var(--bg-hover);
+}
+
+.back-overview-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.back-overview-btn:hover {
+  background: var(--bg-hover);
+  border-color: var(--accent-primary);
+}
+
+/* FESTIVAL OVERVIEW CONTINUOUS SCROLL GRID */
+.festival-overview-scroll-container {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  gap: 16px;
+}
+
+.day-name-headers {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  text-align: center;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-tertiary);
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.weeks-grid-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-height: 680px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.week-row-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sticky-month-divider {
+  position: sticky;
+  top: 0;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  color: var(--accent-primary);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  z-index: 10;
+}
+
+.week-days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.overview-day-cell {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  min-height: 105px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.overview-day-cell:hover {
+  border-color: var(--accent-primary);
+  background: var(--bg-hover);
+}
+
+.overview-day-cell.main-weekend-cell {
+  border-color: rgba(232, 160, 76, 0.4);
+  background: rgba(232, 160, 76, 0.03);
+}
+
+/* The overview marks the exact day that needs attention, without recolouring
+   the selected event chips themselves. */
+.overview-day-cell.has-conflict {
+  border-color: rgba(239, 68, 68, 0.75);
+  background: rgba(239, 68, 68, 0.045);
+}
+
+.overview-day-cell.has-conflict:hover {
+  border-color: #EF4444;
+  background: rgba(239, 68, 68, 0.08);
+}
+
+.cell-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cell-date-num {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.cell-fest-badge {
+  font-size: 0.62rem;
+  font-weight: 800;
+  color: var(--accent-primary);
+  background: rgba(232, 160, 76, 0.15);
+  padding: 1px 4px;
+  border-radius: 2px;
+}
+
+.cell-conflict-badge {
+  color: #FCA5A5;
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.38);
+  border-radius: 3px;
+  font-size: 0.62rem;
+  font-weight: 800;
+  line-height: 1;
+  padding: 3px 5px;
+}
+
+.cell-chips-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin: 6px 0;
+}
+
+.event-chip {
+  font-size: 0.68rem;
+  color: var(--text-primary);
+  background: var(--bg-secondary);
+  border-left: 3px solid var(--accent-primary);
+  padding: 2px 6px;
+  border-radius: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cell-avail-hint {
+  font-size: 0.65rem;
+  color: var(--text-tertiary);
+}
+
+/* FULLCALENDAR DARK THEME SKIN & VIEWPORT-HEIGHT CONTAINER */
+.fullcalendar-wrapper {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 640px;
+}
+
+.conflict-timeline-header {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #EF4444;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* FullCalendar CSS Variable Overrides & Surface Skins */
+.fc {
+  --fc-border-color: rgba(255, 255, 255, 0.07);
+  --fc-daygrid-event-dot-color: var(--accent-primary);
+  --fc-neutral-bg-color: var(--bg-secondary);
+  --fc-page-bg-color: var(--bg-secondary);
+  --fc-list-event-hover-bg-color: var(--bg-hover);
+  --fc-today-bg-color: rgba(232, 160, 76, 0.05);
+  font-family: inherit;
+  height: 100%;
+}
+
+.fc .fc-toolbar {
+  display: none; /* Hide default FC toolbar in favor of our custom compact header */
+}
+
+.fc table, .fc td, .fc th {
+  background: transparent !important;
+}
+
+.fc-theme-standard .fc-scrollgrid {
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: var(--radius-sm);
+}
+
+.fc-theme-standard th {
+  border-color: var(--border-subtle) !important;
+  background: var(--bg-tertiary) !important;
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  padding: 8px 0;
+}
+
+.fc-timegrid-slot {
+  height: 38px !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
+}
+
+.fc-timegrid-slot-label {
+  font-size: 0.7rem;
+  font-family: var(--font-mono);
+  color: var(--text-tertiary);
+  vertical-align: middle;
+}
+
+.fc-timegrid-axis-cushion {
+  width: 50px !important;
+  max-width: 50px !important;
+}
+
+.fc-v-event {
+  border-radius: 4px !important;
+  padding: 4px 6px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.15s;
+}
+
+/* Conflict is explained once above the day grid. Event rectangles stay in
+   their own category colours, so a long hackathon never becomes a third red
+   pseudo-event behind the actual overlapping event. */
+
+/* Multi-Day Event Styling: Subtle striped pattern */
+.fc-v-event.fc-event-multiday {
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.03),
+    rgba(255, 255, 255, 0.03) 10px,
+    transparent 10px,
+    transparent 20px
+  ) !important;
+}
+
+.fc-custom-event-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 100%;
+  height: 100%;
+}
+
+.fc-card-top {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.fc-clash-badge {
+  font-size: 0.62rem;
+  font-weight: 800;
+  color: #EF4444;
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  padding: 1px 4px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  flex-shrink: 0;
+}
+
+.fc-card-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fc-card-time {
+  font-size: 0.66rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .plan-summary-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .week-days-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
