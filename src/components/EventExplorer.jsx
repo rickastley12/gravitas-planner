@@ -1,7 +1,7 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
 import './EventExplorer.css';
 import { formatEventTime, parseAPIDate } from '../utils/scoring';
-import { Calendar, MapPin, Building, DollarSign, Plus, Check, ExternalLink, ArrowRight, AlertTriangle, ShieldCheck, Sparkles, Layers, X } from 'lucide-react';
+import { Calendar, MapPin, Building, IndianRupee, Plus, Check, ExternalLink, ArrowRight, AlertTriangle, ShieldCheck, Sparkles, Layers, X } from 'lucide-react';
 
 export default function EventExplorer({ 
   events = [], 
@@ -364,7 +364,7 @@ export default function EventExplorer({
                               <MapPin size={12} /> {event.venue || 'TBA'}
                             </div>
                             <div className="meta-item">
-                              <DollarSign size={12} /> {event.price === 0 ? 'FREE' : `₹${event.price}`}
+                              <IndianRupee size={12} /> {event.price === 0 ? 'FREE' : `${event.price}`}
                             </div>
                           </div>
 

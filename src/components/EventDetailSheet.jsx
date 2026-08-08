@@ -1,7 +1,7 @@
 import React from 'react';
 import './EventDetailSheet.css';
 import { getTypeColor, formatEventTime, getDurationSemantics } from '../utils/scoring';
-import { X, Calendar, MapPin, Building, Users, DollarSign, ExternalLink, Trash2, Plus, Sparkles } from 'lucide-react';
+import { X, Calendar, MapPin, Building, Users, IndianRupee, ExternalLink, Trash2, Plus, Sparkles } from 'lucide-react';
 
 export default function EventDetailSheet({ event, onClose, isSelected, onTogglePlan }) {
   if (!event) return null;
@@ -64,10 +64,10 @@ export default function EventDetailSheet({ event, onClose, isSelected, onToggleP
             </div>
 
             <div className="info-item">
-              <DollarSign className="info-icon" size={18} />
+              <IndianRupee className="info-icon" size={18} />
               <div>
                 <span className="info-label">Price</span>
-                <span className="info-val">{event.price === 0 ? 'Free' : `₹${event.price}`}</span>
+                <span className="info-val">{event.price === 0 ? 'Free' : `${event.price}`}</span>
               </div>
             </div>
 
