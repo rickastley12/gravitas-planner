@@ -24,6 +24,7 @@
     "@fullcalendar/list": "^6.1.21",
     "@fullcalendar/react": "^6.1.21",
     "@fullcalendar/timegrid": "^6.1.21",
+    "@vercel/analytics": "^2.0.1",
     "file-saver": "^2.0.5",
     "ics": "^3.12.0",
     "lucide-react": "^1.30.0",
