@@ -595,4 +595,7 @@
   .week-days-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .day-name-headers {
+    display: none;
+  }
 }
