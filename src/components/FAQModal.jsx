@@ -1,6 +1,7 @@
 import React from 'react';
 import './FAQModal.css';
 import { X, HelpCircle, Database, ShieldAlert, Sparkles, RefreshCw, CalendarPlus, Share2 } from 'lucide-react';
+import rawEvents from '../data/events_scored.json';
 
 export default function FAQModal({ onClose }) {
   return (
@@ -28,7 +29,7 @@ export default function FAQModal({ onClose }) {
           <div className="faq-item">
             <h4><Database size={16} /> Where does this data come from?</h4>
             <p>
-              Event details (dates, venues, club hosts, ticket prices, team sizes) are fetched directly from the official <strong>VIT Gravitas API dataset</strong> (137 events index).
+              Event details (dates, venues, club hosts, ticket prices, team sizes) are fetched directly from the official <strong>VIT Gravitas API dataset</strong> ({rawEvents.length} events index).
             </p>
           </div>
 
@@ -72,7 +73,7 @@ export default function FAQModal({ onClose }) {
 
         <div className="faq-footer">
           <div className="faq-footer-info">
-            <span>Dataset Version: <code>v1.4 • 137 Events Index</code></span>
+            <span>Dataset Version: <code>v1.4 • {rawEvents.length} Events Index</code></span>
             <span className="faq-credit">
               Built by <a href="https://www.linkedin.com/in/maneet-singh-826b65410/" target="_blank" rel="noopener noreferrer">Maneet Singh</a>
             </span>

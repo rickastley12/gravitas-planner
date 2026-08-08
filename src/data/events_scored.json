@@ -508,47 +508,6 @@
     }
   },
   {
-    "id": "4da21e17-096a-4947-b62f-6dfb1e6c132e",
-    "name": "HackXpertise 3.0",
-    "type": "Hackathon",
-    "club": "IEEE - TECHNOLOGY AND ENGINEERING MANAGEMENT SOCIETY ( IEEE-TEMS)",
-    "start_date": "2026-09-05T09:00:00Z",
-    "end_date": "2026-09-06T18:00:00Z",
-    "venue": "Kamraj Auditorium, CDMM 213",
-    "team_size": "2-4",
-    "price": 170,
-    "short_description": "HackXpertise is a flagship event organized by the IEEE TEMS Chapter, VIT Vellore, during graVITas. It is a 2 day event with a Figma workshop on the first day and a hackathon on the second day.",
-    "scope": "both",
-    "category": "General",
-    "tagline": "Innovation Begins with Expertise.",
-    "is_team": false,
-    "scores": {
-      "robotics": 0,
-      "iot": 0,
-      "ai_ml": 0,
-      "hackathons": 75,
-      "startups": 0,
-      "webdev": 40,
-      "cybersecurity": 0,
-      "electronics": 0,
-      "cad_design": 0,
-      "gaming": 0,
-      "finance": 0,
-      "general_fun": 0
-    },
-    "tags": [
-      "multi-day",
-      "overnight",
-      "hackathon-style",
-      "team-based"
-    ],
-    "duration": {
-      "days": 2,
-      "hours": 33,
-      "label": "2 days (33h)"
-    }
-  },
-  {
     "id": "4f0a6ada-40c9-4626-af30-afce5ac10b3a",
     "name": "Jumanji: The Outbreak",
     "type": "Others",
@@ -1806,46 +1765,6 @@
     }
   },
   {
-    "id": "7e0e8d22-310f-4480-b26e-e9ac92bbbe30",
-    "name": "Antidote Hunt 2.0",
-    "type": "Competition",
-    "club": "SOCIETY FOR BIOLOGICAL ENGINEERING (SBE)",
-    "start_date": "2026-09-18T08:00:00Z",
-    "end_date": "2026-09-18T19:00:00Z",
-    "venue": "SMV 212",
-    "team_size": "3-5",
-    "price": 170,
-    "short_description": "A dangerous pathogen has escaped... and the city is counting on you.  A rogue scientist's experiment has gone horribly wrong, unleashing an unknown pathogen into the city. As elite BioWarriors, your mission is to analyze the clues it left behind, identify the organism using real microbiology and molecular biology techniques, and stop the outbreak before it's too late.",
-    "scope": "both",
-    "category": "General",
-    "tagline": "From Outbreak to Breakthrough",
-    "is_team": true,
-    "scores": {
-      "robotics": 0,
-      "iot": 0,
-      "ai_ml": 0,
-      "hackathons": 0,
-      "startups": 0,
-      "webdev": 0,
-      "cybersecurity": 0,
-      "electronics": 0,
-      "cad_design": 0,
-      "gaming": 0,
-      "finance": 0,
-      "general_fun": 10
-    },
-    "tags": [
-      "single-day",
-      "competitive",
-      "team-based"
-    ],
-    "duration": {
-      "days": 1,
-      "hours": 11,
-      "label": "1 day (11h)"
-    }
-  },
-  {
     "id": "abc220f9-a716-4235-b108-a96c25cfdb9d",
     "name": "What The Flag",
     "type": "Competition",
@@ -2142,7 +2061,7 @@
     "club": "INDIAN SOCIETY FOR TECHNICAL EDUCATION (ISTE)",
     "start_date": "2026-09-18T08:00:00Z",
     "end_date": "2026-09-19T07:00:00Z",
-    "venue": "Sarojini Naidi Gallery",
+    "venue": "Sarojini Naidu Gallery",
     "team_size": "5",
     "price": 500,
     "short_description": "Nebula is a beginner-friendly overnight workshop where a team of 5 build CyberDeck, a multifunctional AI companion featuring voice and touch interaction, multiple interactive modes, built-in games, IoT automation, a digital pet, music player, productivity tools, a smart dashboard, BMP180-based environmental sensing, and an e-reader mode. No prior experience is required. Learn, build, innovate, and take your creation home!",
@@ -3214,7 +3133,7 @@
     "type": "Hackathon",
     "club": "SOCIETY OF AUTOMOTIVE ENGINEERS (SAE)",
     "start_date": "2026-09-18T10:00:00Z",
-    "end_date": "2026-09-19T16:00:00Z",
+    "end_date": "2026-09-19T18:00:00Z",
     "venue": "Homi Baba Gallery",
     "team_size": "3-5",
     "price": 300,
@@ -3247,8 +3166,8 @@
     ],
     "duration": {
       "days": 2,
-      "hours": 30,
-      "label": "2 days (30h)"
+      "hours": 32,
+      "label": "2 days (32h)"
     }
   },
   {
@@ -5463,7 +5382,7 @@
     "club": "INTERNET OF THINGS COMMUNITY (IOTHINC)",
     "start_date": "2026-09-20T14:00:00Z",
     "end_date": "2026-09-20T18:00:00Z",
-    "venue": "Sarojini Naidi Gallery",
+    "venue": "Sarojini Naidu Gallery",
     "team_size": "Solo",
     "price": 120,
     "short_description": "Step into the world of open-source development with the Introduction to Linux Workshop. Learn Linux fundamentals, including the command line, file systems, permissions, shell scripting, and package management. Set up your own Linux environment or virtual machine and automate real-world tasks using terminal workflows. Designed for beginners, this hands-on workshop requires no prior DevOps or system administration experience.",
@@ -5618,45 +5537,6 @@
       "days": 1,
       "hours": 4,
       "label": "1 day (4h)"
-    }
-  },
-  {
-    "id": "f9e8801e-f87f-4ffc-b2e4-78b52bf61ff5",
-    "name": "ForkThis",
-    "type": "",
-    "club": "",
-    "start_date": "TBD",
-    "end_date": "TBD",
-    "venue": "TBD",
-    "team_size": "",
-    "price": 0,
-    "short_description": "",
-    "scope": "",
-    "category": "",
-    "tagline": "",
-    "is_team": false,
-    "scores": {
-      "robotics": 0,
-      "iot": 0,
-      "ai_ml": 0,
-      "hackathons": 0,
-      "startups": 0,
-      "webdev": 0,
-      "cybersecurity": 0,
-      "electronics": 0,
-      "cad_design": 0,
-      "gaming": 0,
-      "finance": 0,
-      "general_fun": 0
-    },
-    "tags": [
-      "free",
-      "team-based"
-    ],
-    "duration": {
-      "days": 1,
-      "hours": 0,
-      "label": "TBD"
     }
   }
 ]

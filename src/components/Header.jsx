@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Header.css';
 import { Search, Compass, CalendarCheck, HelpCircle, SlidersHorizontal, Share2, ExternalLink, X, Ticket } from 'lucide-react';
+import rawEvents from '../data/events_scored.json';
 
 function GithubMark({ size = 16 }) {
   return (
@@ -93,7 +94,7 @@ export default function Header({
             <Search size={14} className="search-icon" />
             <input 
               type="text" 
-              placeholder="Search 137 events, clubs, venues..." 
+              placeholder={`Search ${rawEvents.length} events, clubs, venues...`} 
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="mono-font"

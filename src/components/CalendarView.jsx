@@ -118,7 +118,18 @@ export default function CalendarView({
 
   // Dynamic range computation for Festival Overview
   const festivalWeeks = useMemo(() => {
-    const startIso = '2026-08-28';
+    // Derive the grid's start from the earliest event in the dataset instead
+    // of a hardcoded date, so early-fest events (like the Aug 21 CTF) always
+    // get a visible cell instead of silently falling outside the grid.
+    let earliestIso = '2026-08-28';
+    rawEvents.forEach(e => {
+      const d = parseAPIDate(e.start_date);
+      if (d) {
+        const iso = toIsoDate(d);
+        if (iso < earliestIso) earliestIso = iso;
+      }
+    });
+    const startIso = earliestIso;
     const endIso = '2026-09-27';
 
     const startDate = new Date(startIso);
@@ -516,7 +527,7 @@ export default function CalendarView({
         /* FullCalendar Engine for Day Timeline, Agenda & Week Timeline */
         <div className="fullcalendar-wrapper">
           {viewMode === 'timeGridDay' && focusedConflicts.map(({ eventA, eventB, overlapStart, overlapEnd }, index) => (
-            <div className="conflict-timeline-header mono-font">
+            <div key={`${eventA.id}::${eventB.id}`} className="conflict-timeline-header mono-font">
               <AlertTriangle size={16} />
               <span>
                 Clash: {eventA.name} × {eventB.name} · {overlapStart.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' })}–{overlapEnd.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' })}
