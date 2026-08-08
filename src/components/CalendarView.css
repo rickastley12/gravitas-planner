@@ -360,6 +360,8 @@
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-sm);
   min-height: 105px;
+  min-width: 0;
+  overflow: hidden;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -597,5 +599,8 @@
   }
   .day-name-headers {
     display: none;
+  }
+  .festival-overview-scroll-container {
+    overflow-x: hidden;
   }
 }
